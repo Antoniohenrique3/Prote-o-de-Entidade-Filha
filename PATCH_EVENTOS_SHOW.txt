@@ -1,0 +1,7 @@
+Na view eventos.show, envolva o botão de exclusão:
+
+@can('delete', $pergunta)
+    <x-danger-button type="submit">
+        Excluir Pergunta
+    </x-danger-button>
+@endcan

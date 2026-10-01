@@ -1,0 +1,14 @@
+No método destroyPergunta, antes de excluir a pergunta:
+
+$this->authorize('delete', $pergunta);
+
+Exemplo:
+
+public function destroyPergunta(Pergunta $pergunta)
+{
+    $this->authorize('delete', $pergunta);
+
+    $pergunta->delete();
+
+    return back();
+}
